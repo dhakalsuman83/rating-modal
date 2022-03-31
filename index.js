@@ -9,9 +9,6 @@ ratings.forEach((rating, index) => {
   rating.addEventListener("click", () => {
     btn.disabled = false;
     btn.style.cursor = "pointer";
-    // for (let i = 0; i <= index; i++) {
-    //   ratings[i].style.backgroundColor = "hsl(25, 97%, 53%)";
-    // }
     btn.addEventListener("click", () => {
       let rating = index === 0 ? "rating" : "ratings";
       ratingMessage.innerHTML = `You have given ${index + 1} ${rating} `;
