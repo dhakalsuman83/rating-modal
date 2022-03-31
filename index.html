@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./index.css">
+  <script src="./index.js" defer></script>
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+        <div class="card-details">
+          <img class="card-item card-item-img" src="./images/icon-star.svg" alt="star-icon">
+          <h2 class="card-item">How did we do?</h2>
+          <p class="card-item">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+          <div class="rating-container card-item">
+            <button class="rating-content">1</button>
+            <button class="rating-content">2</button>
+            <button class="rating-content">3</button>
+            <button class="rating-content">4</button>
+            <button class="rating-content">5</button>
+          </div>
+          <button class="btn card-item" disabled>Submit</button>
+        </div>
+        <div class="modal">
+          <i class="fa-solid fa-xmark modal-item" id="modal-icon"></i>
+          <img src="./images/illustration-thank-you.svg" alt="thank you svg" class="modal-img modal-item">
+          <div class="rating-msg modal-item"></div>
+          <h2 class="modal-item">Thank you!</h2>
+          <p class="modal-item">We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
+        </div>
+    </div>
+    </div>
+  </div>
+</body>
+</html>
