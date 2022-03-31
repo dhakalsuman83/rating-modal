@@ -2,14 +2,16 @@ const ratings = document.querySelectorAll(".rating-content");
 const modal = document.querySelector(".modal");
 const modalIcon = document.getElementById("modal-icon");
 const btn = document.querySelector(".btn");
+const btnStyle = window.getComputedStyle(btn, "hover");
 const ratingMessage = document.querySelector(".rating-msg");
 
 ratings.forEach((rating, index) => {
   rating.addEventListener("click", () => {
-    console.log(rating);
     btn.disabled = false;
+    btn.style.cursor = "pointer";
     btn.addEventListener("click", () => {
-      ratingMessage.innerHTML = `You have given ${index + 1} rating `;
+      let rating = index === 0 ? "rating" : "ratings";
+      ratingMessage.innerHTML = `You have given ${index + 1} ${rating} `;
       modal.style.zIndex = "100";
     });
   });
@@ -18,4 +20,5 @@ ratings.forEach((rating, index) => {
 modalIcon.addEventListener("click", () => {
   modal.style.zIndex = "-1";
   btn.disabled = true;
+  btn.style.cursor = "not-allowed";
 });
